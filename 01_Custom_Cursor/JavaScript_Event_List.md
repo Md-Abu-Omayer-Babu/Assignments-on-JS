@@ -1,0 +1,79 @@
+
+# JavaScript Event List
+
+## 1️⃣ Mouse Events
+- `click` → When the user clicks on an element  
+- `dblclick` → When the user double-clicks  
+- `mousedown` → When the mouse button is pressed  
+- `mouseup` → When the mouse button is released  
+- `mousemove` → When the mouse moves  
+- `mouseenter` → When the mouse enters an element (doesn't bubble)  
+- `mouseleave` → When the mouse leaves an element (doesn't bubble)  
+- `mouseover` → When the mouse enters an element or a child element  
+- `mouseout` → When the mouse leaves an element or a child element  
+- `contextmenu` → When the right-click menu is opened  
+
+## 2️⃣ Keyboard Events
+- `keydown` → When a key is pressed  
+- `keyup` → When a key is released  
+- `keypress` _(Deprecated)_ → Similar to `keydown`, but doesn't detect special keys  
+
+## 3️⃣ Form Events
+- `focus` → When an input gets focus  
+- `blur` → When an input loses focus  
+- `change` → When an input's value changes  
+- `input` → When a user types in an input field  
+- `submit` → When a form is submitted  
+- `reset` → When a form is reset  
+
+## 4️⃣ Clipboard Events
+- `copy` → When content is copied  
+- `cut` → When content is cut  
+- `paste` → When content is pasted  
+
+## 5️⃣ Drag and Drop Events
+- `drag` → When an element is being dragged  
+- `dragstart` → When dragging starts  
+- `dragend` → When dragging ends  
+- `dragover` → When an element is dragged over a valid drop target  
+- `dragenter` → When an element enters a drop target  
+- `dragleave` → When an element leaves a drop target  
+- `drop` → When an element is dropped  
+
+## 6️⃣ Touch Events (Mobile)
+- `touchstart` → When a touch starts  
+- `touchmove` → When a touch moves  
+- `touchend` → When a touch ends  
+- `touchcancel` → When a touch event is interrupted  
+
+## 7️⃣ Window Events
+- `load` → When the page has fully loaded  
+- `unload` → When the page is being unloaded  
+- `resize` → When the window is resized  
+- `scroll` → When the user scrolls  
+- `beforeunload` → When the user tries to leave the page  
+- `hashchange` → When the URL hash changes  
+- `popstate` → When navigating browser history  
+
+## 8️⃣ Media Events
+- `play` → When media starts playing  
+- `pause` → When media is paused  
+- `ended` → When media ends  
+- `timeupdate` → When the media's current playback time updates  
+- `volumechange` → When volume is changed  
+
+## 9️⃣ Animation & Transition Events
+- `animationstart` → When an animation starts  
+- `animationend` → When an animation ends  
+- `animationiteration` → When an animation repeats  
+- `transitionstart` → When a transition starts  
+- `transitionend` → When a transition ends  
+
+## 🔟 Miscellaneous Events
+- `error` → When an error occurs (images, scripts, etc.)  
+- `online` → When the user comes online  
+- `offline` → When the user goes offline  
+- `storage` → When localStorage/sessionStorage changes  
+- `visibilitychange` → When the document visibility changes  
+- `devicemotion` → When device motion is detected  
+- `deviceorientation` → When device orientation changes  

@@ -27,3 +27,24 @@ paragraph.onmouseover = function() {
 paragraph.onmouseout = function() {
     this.style.color = "black";
 };
+
+let body = document.getElementById("body");
+
+// body.addEventListener("mousemove", function(e){
+//     console.log(e);
+//     console.log(e.screenX);
+//     console.log(e.pageX);
+//     console.log(e.clientX);
+// }, false)
+
+// body.addEventListener("click", function(e){
+//     console.log(e);
+//     console.log(e.screenX);
+//     console.log(e.pageX);
+//     console.log(e.clientX);
+// }, false)
+
+
+body.addEventListener("focus", function(e){
+    console.log(e);
+})
