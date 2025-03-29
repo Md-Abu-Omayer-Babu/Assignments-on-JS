@@ -1,50 +1,36 @@
-let customCursor = document.getElementById("custom-cursor");
+const cursor = document.getElementById("cursor");
 
-customCursor.onmouseover = function() {
-    this.innerHTML = "Custom Cursor (Hover Effect) is working.........";
-};
+document.addEventListener("mousemove", (e) => {
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
 
-customCursor.onmouseout = function() {
-    this.innerHTML = "Custom Cursor";
-};
-
-let title = document.getElementById("title");
-
-title.onmouseover = function() {
-    this.innerHTML = "Title (Hover Effect) is working.........";
-};
-
-title.onmouseout = function() {
-    this.innerHTML = "This is a title";
-};
-
-let paragraph = document.querySelector("p");
-
-paragraph.onmouseover = function() {
-    this.style.color = "red";
-};
-
-paragraph.onmouseout = function() {
-    this.style.color = "black";
-};
-
-let body = document.getElementById("body");
-
-// body.addEventListener("mousemove", function(e){
-//     console.log(e);
-//     console.log(e.screenX);
-//     console.log(e.pageX);
-//     console.log(e.clientX);
-// }, false)
-
-// body.addEventListener("click", function(e){
-//     console.log(e);
-//     console.log(e.screenX);
-//     console.log(e.pageX);
-//     console.log(e.clientX);
-// }, false)
-
-
-body.addEventListener("focus", function(e){
-    console.log(e);
+document.addEventListener("mouseout", (e) => {
+    cursor.style.visibility = "hidden";
 })
+
+document.addEventListener("mouseover", (e) => {
+    cursor.style.visibility = "visible";
+})
+
+const redColor = () => {
+    return Math.floor(Math.random() * 256);
+}
+
+const greenColor = () => {
+    return Math.floor(Math.random() * 256);
+}
+
+const blueColor = () => {
+    return Math.floor(Math.random() * 256);
+}
+
+function generateRandomColor() {
+    return `rgb(${redColor()}, ${greenColor()}, ${blueColor()})`;
+}
+
+document.addEventListener("click", ()=> {
+    cursor.style.backgroundColor = generateRandomColor();
+})
+
+
+
