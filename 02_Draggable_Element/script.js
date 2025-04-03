@@ -1,20 +1,20 @@
 const box1 = document.getElementById("box1");
 let isDragging = false;
-let offsetX, offsetY;
+let X, Y;
 
 // Start dragging on mousedown
 box1.addEventListener("mousedown", (e) => {
     isDragging = true;
-    offsetX = e.clientX - box1.getBoundingClientRect().left;
-    offsetY = e.clientY - box1.getBoundingClientRect().top;
+    X = e.clientX - box1.getBoundingClientRect().left;
+    Y = e.clientY - box1.getBoundingClientRect().top;
     box1.style.position = "absolute";
 });
 
 // Move the box on mousemove
 document.addEventListener("mousemove", (e) => {
     if (!isDragging) return;
-    box1.style.left = `${e.clientX - offsetX}px`;
-    box1.style.top = `${e.clientY - offsetY}px`;
+    box1.style.left = `${e.clientX - X}px`;
+    box1.style.top = `${e.clientY - Y}px`;
 });
 
 // Stop dragging on mouseup
