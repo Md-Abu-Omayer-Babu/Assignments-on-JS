@@ -1,20 +1,34 @@
 const box1 = document.getElementById("box1");
+let isDragging = false;
+let offsetX, offsetY;
 
-box1.addEventListener("click", (e) => {
-    box1.classList.add("bg-gray-500");
-})
+// Start dragging on mousedown
+box1.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - box1.getBoundingClientRect().left;
+    offsetY = e.clientY - box1.getBoundingClientRect().top;
+    box1.style.position = "absolute";
+});
 
-box1.addEventListener("mouseout", (e) => {
-    box1.classList.remove("bg-gray-500");
-})
+// Move the box on mousemove
+document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    box1.style.left = `${e.clientX - offsetX}px`;
+    box1.style.top = `${e.clientY - offsetY}px`;
+});
 
+// Stop dragging on mouseup
+document.addEventListener("mouseup", () => {
+    isDragging = false;
+});
+
+
+
+// Drag and drop
 const box2 = document.getElementById("box2");
 
-box2.addEventListener("dragstart", (e) => {
-    box2.classList.add("bg-gray-500");
-})
-
 box2.addEventListener("dragend", (e) => {
-    box2.classList.remove("bg-gray-500");
-})
-
+    box2.style.position = "absolute";
+    box2.style.left = `${e.clientX - box2.offsetWidth}px`;
+    box2.style.top = `${e.clientY - box2.offsetHeight}px`;
+});
